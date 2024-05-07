@@ -1,11 +1,13 @@
-import Alert from "./components/Alert";
+import Button from "./components/Button";
 
 function App() {
+   const clickHandler = () => {
+      console.log("clicked");
+   };
+
    return (
       <>
-         <Alert>
-            Hello <span>World</span>
-         </Alert>
+         <Button onBtnClick={clickHandler}>My Button</Button>
       </>
    );
 }
