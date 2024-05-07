@@ -1,7 +1,9 @@
-function ListGroup() {
-   let items = ["Ha Noi", "Berlin", "Dortmund"];
+import { MouseEvent } from "react";
 
-   items = [];
+function ListGroup() {
+   const items = ["Ha Noi", "Berlin", "Dortmund", "Köln", "Düsseldorf"];
+
+   const handleClick = (event: MouseEvent) => console.log(event);
 
    return (
       <>
@@ -14,6 +16,7 @@ function ListGroup() {
                <li
                   key={item}
                   className="list-group-item"
+                  onClick={handleClick}
                >
                   {item}
                </li>
